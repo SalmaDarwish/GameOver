@@ -1,0 +1,77 @@
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+    <div class="container-fluid ms-5 mb-0">
+      <a class="navbar-brand me-5 pointer ms-5" routerLink="/home"><img class="logo"  src="./assets/images/logo (3).png" alt="logo">Game Over</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"  *ngIf="!isLogin">
+          <li class="nav-item">
+            <a class="nav-link pointer" aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" routerLink="/games">All</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Platforms
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item pointer"  routerLink="platforms" [queryParams]="{type:pc}">pc </a></li>
+              <li><a class="dropdown-item pointer"  routerLink="platforms" [queryParams]="{type:browser}">Browser</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort-by
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item pointer" routerLink="sortby" [queryParams]="{sort:'release-date'}">Release Date </a></li>
+              <li><a class="dropdown-item pointer" routerLink="sortby" [queryParams]="{sort:'popularity'}">Popularity</a></li>
+              <li><a class="dropdown-item pointer" routerLink="sortby" [queryParams]="{sort:'alphabetical'}">Alphabetical</a></li>
+              <li><a class="dropdown-item pointer" routerLink="sortby" [queryParams]="{sort:'relevance'}">Relevance</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item pointer"  routerLink="categories" [queryParams]="{cat:'racing'}">Racing</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'sports'}">Sports </a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'social'}">Social</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'shooter'}">Shooter</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'open-world'}">Open-World</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'zombie'}">Zombie</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'fantasy'}">Fantasy</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'action-rpg'}">Action-RPG</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'action'}">Action</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'fight'}">Fight</a></li>
+              <li><a class="dropdown-item pointer" routerLink="categories" [queryParams]="{cat:'battle-royale'}">Battle-Royale</a></li>
+
+
+
+
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center ms-auto">
+
+        <ul class="d-flex list-unstyled mb-0 me-auto mt-0">
+            <li  *ngIf="!isLogin" class="mt-2 pt-1 pointer "> 
+                <a  class="text-decoration-none text-muted mx-2 white" routerLink="login">Login</a>
+              </li>
+            <li  *ngIf="!isLogin" class="mt-1 pt-1 pointer me-2">
+              <a routerLink="register" class=" btn btn-outline-ftg log">Join Free</a>
+            </li>
+          
+            <li *ngIf="isLogin" (click)="logOut()" class="mt-2 pt-1 pointer">
+              <p class="btn log small">Logout</p>
+            </li>
+          </ul>
+          </div>
+     
+      </div>
+    </div>
+  </nav>

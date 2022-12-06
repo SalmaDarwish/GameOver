@@ -28,9 +28,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/slick-carousel/slick/slick.scss",  
+              "./node_modules/slick-carousel/slick/slick-theme.scss"  
+        
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+            "./node_modules/slick-carousel/slick/slick.min.js"  
+            ]
           },
           "configurations": {
             "production": {
@@ -38,6 +48,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
+                  
                   "maximumError": "1mb"
                 },
                 {
@@ -92,10 +103,11 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,5 +115,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "85cdc1a0-29f4-4af4-9843-c58e6cbc5b5d"
   }
 }

@@ -1,0 +1,43 @@
+.bg-register{
+    background: url(../../assets/images/gaming.ebaf2ffc84f4451d.jpg);
+    background-size: 100% 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+.register{
+    background-color: #32383e !important;
+    form::after{
+        content: "";
+        position: absolute;
+        width: 98%;
+        height: 1px;
+        top:102%;
+        left:1%;
+        background-color: rgb(110, 110, 110);
+       
+    }
+    input{
+        background-color: #1c1e22;
+        border: 0 solid rgba(0,0,0,.6);
+        border-radius: 5px;
+        color: white;
+        font-size: 11px;
+       
+    }
+    input::placeholder{
+        font-size: 11px;
+    }
+    .btn-register{
+        color: #fff;
+        background-color: #3a3f44;
+        border-color: #22241d;
+    }
+
+}
+
+
+.small{
+    font-size: 10px;
+}

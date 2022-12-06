@@ -1,0 +1,52 @@
+<!-- <section class="d-flex flex-column">
+
+<div class="page mt-3 pointer" >
+  <div class="wrapper mt-3 mb-1 pb-5"  routerLink="details" [queryParams]="{id:game.id}">
+    <div class="front rounded">
+      <div class="game-img">
+        <img alt="" *ngIf="game.thumbnail" [src]="game.thumbnail" class="w-100 mt-0 rounded-top" />
+        <img alt="" *ngIf="!game.thumbnail" src="./assets/images/image-not-found-grayscale-photo-260nw-1737334631.webp" class="w-100 mt-0 rounded-top" />
+
+      </div>
+      <div class="game-data d-flex justify-content-between align-items-center">
+        <h4 class="fs-6 text-white mt-3 mx-2"> {{game.title | cutText:3}}</h4>
+        <span class="bg-primary px-2 py-1 mx-2 small text-white rounded mt-3">free</span>
+      </div>
+      <div class="card-footer d-flex justify-content-between align-items-center">
+        <p class="xsmall text-white mt-2 mx-2 genre px-2 py-1 rounded"> {{game.genre}}</p>
+        <i *ngIf="game.platform==('PC (Windows)')" class="fab fa-windows text-muted mx-2 mt-3"> </i>
+        <i *ngIf="game.platform==('Web Browser')" class="fa-brands fa-chrome text-muted mx-2 mt-3"> </i>
+
+      </div>
+    </div>
+    <div class="back rounded">
+        
+        <p class="small text-white mx-3 my-3"> {{game.short_description | cutText:18}} . . . </p>
+        <p class="xsmall text-white mx-3"> Developed By : <span class="small text-info"> {{ game.developer}}</span></p>
+    </div>
+  </div>
+</div>
+<button class="btn btn-secondary px-2  d-flex w-auto mx-auto mt-2"><a  class="small text-white text-decoration-none text-center " target="_blank" [href]="game.game_url"> Play Now <i class="fa-solid fa-gamepad"></i></a></button>
+</section>
+
+ -->
+ 
+ <figure class="snip1107 blue"><img [src]="game.thumbnail" class="w-100" [alt]="game.title"/>
+  <figcaption>
+    <div class="text-black small"><span>Play Now<a target="_blank" [href]="game.game_url"></a></span></div>
+    <div>
+    </div>
+   
+    <a target="_blank" [href]="game.game_url"></a>
+  </figcaption>
+  <div class="d-flex footer justify-content-center align-items-center py-1 pointer px-2" routerLink="/details" [queryParams]="{id:game.id, cat:game.genre}">
+    <i *ngIf="game.platform==('PC (Windows)')" class="fab fa-windows  ms-2 mt-2 mb-2"> </i>
+<i *ngIf="game.platform==('Web Browser')" class="fa-brands fa-chrome  ms-2 mt-2 mb-2"> </i>
+      <h3 class="title bg-transparent">{{game.title | cutText:3}}</h3>
+      <p class="xsmall text-white mt-2 pt-1 mx-1 genre px-0 rounded"> {{game.genre}}</p>
+
+</div>
+
+</figure>
+
+
